@@ -58,6 +58,8 @@ pulando = False
 
 modo_jogo = 1
 
+print("Opa")
+input("Olaaaaaaaaa")
 running = True
 while running:
     for event in pygame.event.get():
