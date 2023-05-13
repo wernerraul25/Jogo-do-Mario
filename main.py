@@ -67,9 +67,18 @@ while running:
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not pulando:
-                y_pulo = -30
-                pulando = True
-                som_pulo.play()
+            y_pulo = -30
+            pulando = True
+            som_pulo.play()
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP and not pulando:
+            y_pulo = -30
+            pulando = True
+            som_pulo.play()
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_w and not pulando:
+            y_pulo = -30
+            pulando = True
+            som_pulo.play()
+
 
     if modo_jogo == 1:
         # Atualiza a posição vertical do personagem
@@ -139,7 +148,7 @@ while running:
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
-            
+
     pygame.display.update()
     clock.tick(fps)
 
