@@ -8,7 +8,7 @@ largura = 1280
 #tamanho = (1280,720)
 black = (0,0,0)
 white = (255,255,255)
-fps = 60
+fps = 144
 
 #cria a pontuação e fonte
 ponto = 0
