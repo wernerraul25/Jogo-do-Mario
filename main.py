@@ -11,7 +11,6 @@ white = (255,255,255)
 fps = 144
 
 #cria a pontuação e fonte
-ponto = 0
 pontuacao = 0
 fonte = pygame.font.Font(None,36) #cria uma fonte com tamanho 36
 
@@ -28,8 +27,8 @@ musica_mario.set_volume(0.1) #regula o volume da música
 som_pulo = pygame.mixer.Sound("Jogo-do-Mario\wee.wav")
 som_pulo.set_volume(0.1)
 
-#carrega ó a maconha
-som_bomba = pygame.mixer.Sound("Jogo-do-Mario\olha-a-maconha.mp3")
+#carrega som da bomba
+som_bomba = pygame.mixer.Sound("Jogo-do-Mario\partiuabomba.mp3")
 som_bomba.set_volume(0.1)
 
 #carrega som final
@@ -70,14 +69,17 @@ while running:
             y_pulo = -30
             pulando = True
             som_pulo.play()
+            pontuacao += 1#cada pulo aumenta um ponto
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP and not pulando:
             y_pulo = -30
             pulando = True
             som_pulo.play()
+            pontuacao += 1
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_w and not pulando:
             y_pulo = -30
             pulando = True
             som_pulo.play()
+            pontuacao += 1
 
 
     if modo_jogo == 1:
@@ -91,8 +93,8 @@ while running:
             pulando = False
 
         #verifica se o personagem pulou um objeto
-        if posicao_marioy <= altura - 100 and not pulando:#ta somando muitos numeros, mas funcionando
-            pontuacao += ponto
+        '''if posicao_marioy <= altura - 100 and not pulando:
+            pontuacao += 0'''#era pra somar pontos, mas soma errado
 
         #o que aparece na tela
         tela.blit(fundo,(0,0))
