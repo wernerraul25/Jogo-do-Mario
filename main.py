@@ -15,25 +15,25 @@ ponto = 0
 pontuacao = 0
 fonte = pygame.font.Font(None,36) #cria uma fonte com tamanho 36
 
-mario = pygame.image.load("Aulas\Jogo_mario\mario.png")
-fundo = pygame.image.load("Aulas\Jogo_mario\mariofundo.jpg")
-cano = pygame.image.load("Aulas\Jogo_mario\cano.png")
-bomba = pygame.image.load("Aulas\Jogo_mario\hbomba.png")
+mario = pygame.image.load("Jogo-do-Mario\mario.png")
+fundo = pygame.image.load("Jogo-do-Mario\mariofundo.jpg")
+cano = pygame.image.load("Jogo-do-Mario\cano.png")
+bomba = pygame.image.load("Jogo-do-Mario\hbomba.png")
 
-musica_mario = pygame.mixer.Sound("Aulas\Aula11\musicmario.wav")  #carrega a musica
+musica_mario = pygame.mixer.Sound("Jogo-do-Mario\musicmario.wav")  #carrega a musica
 musica_mario.play(-1) #deixa a musica jogo todo
 musica_mario.set_volume(0.1) #regula o volume da música
 
 #carrega wee
-som_pulo = pygame.mixer.Sound("Aulas\Jogo_mario\wee.wav")
+som_pulo = pygame.mixer.Sound("Jogo-do-Mario\wee.wav")
 som_pulo.set_volume(0.1)
 
 #carrega ó a maconha
-som_bomba = pygame.mixer.Sound("Aulas\Jogo_mario\olha-a-maconha.mp3")
+som_bomba = pygame.mixer.Sound("Jogo-do-Mario\olha-a-maconha.mp3")
 som_bomba.set_volume(0.1)
 
 #carrega som final
-som_final = pygame.mixer.Sound("Aulas\Jogo_mario\perdedor.mp3")
+som_final = pygame.mixer.Sound("Jogo-do-Mario\perdedor.mp3")
 som_final.set_volume(0.1)
 
 clock = pygame.time.Clock()
@@ -137,9 +137,7 @@ while running:
         #som de final
         som_final.play()
 
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-            running = False
-        elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
 
     pygame.display.update()
