@@ -69,7 +69,7 @@ while running:
             y_pulo = -30
             pulando = True
             som_pulo.play()
-            pontuacao += 1#cada pulo aumenta um ponto
+            pontuacao += 1 #cada pulo aumenta um ponto
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP and not pulando:
             y_pulo = -30
             pulando = True
@@ -83,6 +83,7 @@ while running:
 
 
     if modo_jogo == 1:
+
         # Atualiza a posição vertical do personagem
         posicao_marioy += y_pulo
         y_pulo += gravidade
@@ -134,7 +135,7 @@ while running:
             som_bomba.play()
 
     #caso perca vai aparecer a segunda tela
-    elif modo_jogo == 2:    
+    elif modo_jogo == 2:
         texto_fim = fonte.render("O jogo acabou!",True,white)
         texto_fim2 = fonte.render("Sua pontuação foi: " + str(pontuacao), True, white)
         tela.blit(texto_fim,(550,320))
@@ -147,9 +148,6 @@ while running:
         
         #som de final
         som_final.play()
-
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-            running = False
 
     pygame.display.update()
     clock.tick(fps)
