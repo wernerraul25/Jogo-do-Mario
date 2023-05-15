@@ -8,14 +8,14 @@ cx_Freeze.setup(
     options = {
         "build_exe":{
             "packages":["pygame"],
-            "include_files":["Jogo-do-Mario\mariofundo.jpg",
-                             "Jogo-do-Mario\cano.png",
-                             "Jogo-do-Mario\hbomba.png",
-                             "Jogo-do-Mario\mario.png",
-                             "Jogo-do-Mario\musicmario.wav",
-                             "Jogo-do-Mario\partiuabomba.mp3",
-                             "Jogo-do-Mario\perdedor.mp3",
-                             "Jogo-do-Mario\wee.wav"]
+            "include_files":["Jogo_do_Mario\mariofundo.jpg",
+                             "Jogo_do_Mario\cano.png",
+                             "Jogo_do_Mario\hbomba.png",
+                             "Jogo_do_Mario\mario.png",
+                             "Jogo_do_Mario\musicmario.wav",
+                             "Jogo_do_Mario\partiuabomba.mp3",
+                             "Jogo_do_Mario\perdedor.mp3",
+                             "Jogo_do_Mario\wee.wav"]
         }
     }, executables = executables
 )
