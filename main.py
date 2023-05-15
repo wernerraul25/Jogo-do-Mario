@@ -39,7 +39,7 @@ som_final = pygame.mixer.Sound("Jogo-do-Mario\perdedor.mp3")
 som_final.set_volume(0.1)
 
 #texto de meme impossivel na pontuação 50
-texto_meme = fonte_meme.render("AAAAAAAAAAA VAI AGORA",True,white)
+texto_meme = fonte_meme.render("AAAAAAAAAAA TENTA AGORA",True,white)
 
 clock = pygame.time.Clock()
 tela = pygame.display.set_mode((largura,altura))
@@ -150,7 +150,7 @@ while running:
             dificuldade = 11
         elif pontuacao >= 50:
             dificuldade = dificuldade + 1
-            tela.blit(texto_meme,(430,200))
+            tela.blit(texto_meme,(4150,200))
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
