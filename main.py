@@ -15,7 +15,7 @@ dificuldade = 7
 #cria a pontuação e fonte
 pontuacao = 0
 fonte = pygame.font.Font(None,36) #cria uma fonte com tamanho 36
-fonte_meme = pygame.font.Font(None,50)
+fonte_meme = pygame.font.Font(None,50) #cria fonte com tamanho 50
 
 mario = pygame.image.load("Jogo-do-Mario\mario.png")
 fundo = pygame.image.load("Jogo-do-Mario\mariofundo.jpg")
