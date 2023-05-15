@@ -15,6 +15,7 @@ dificuldade = 7
 #cria a pontuação e fonte
 pontuacao = 0
 fonte = pygame.font.Font(None,36) #cria uma fonte com tamanho 36
+fonte_meme = pygame.font.Font(None,50)
 
 mario = pygame.image.load("Jogo-do-Mario\mario.png")
 fundo = pygame.image.load("Jogo-do-Mario\mariofundo.jpg")
@@ -38,7 +39,7 @@ som_final = pygame.mixer.Sound("Jogo-do-Mario\perdedor.mp3")
 som_final.set_volume(0.1)
 
 #texto de meme impossivel na pontuação 50
-texto_meme = fonte.render("AAAAAAAAAAA VAI AGORA",True,white)
+texto_meme = fonte_meme.render("AAAAAAAAAAA VAI AGORA",True,white)
 
 clock = pygame.time.Clock()
 tela = pygame.display.set_mode((largura,altura))
@@ -85,7 +86,6 @@ while running:
             pulando = True
             som_pulo.play()
             pontuacao += 1
-
 
     if modo_jogo == 1:
 
@@ -150,14 +150,14 @@ while running:
             dificuldade = 11
         elif pontuacao >= 50:
             dificuldade = dificuldade + 1
-            tela.blit(texto_meme,(550,200))
+            tela.blit(texto_meme,(430,200))
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
         texto_fim = fonte.render("O jogo acabou!",True,white)
         texto_fim2 = fonte.render("Sua pontuação foi: " + str(pontuacao), True, white)
-        tela.blit(texto_fim,(550,320))
-        tela.blit(texto_fim2,(535,360))
+        tela.blit(texto_fim,(530,320))
+        tela.blit(texto_fim2,(525,360))
         
         #para os sons
         som_pulo.stop()
