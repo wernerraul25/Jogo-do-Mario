@@ -26,5 +26,5 @@ setup(
 
 #o executavel não acontece nada
 
-#python Jogo-do-Mario\setup.py build
-#python Jogo-do-Mario\setup.py bdist_msi
+#python Jogo_do_Mario\setup.py build
+#python Jogo_do_Mario\setup.py bdist_msi

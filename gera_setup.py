@@ -20,6 +20,6 @@ cx_Freeze.setup(
     }, executables = executables
 )
 
-#python Jogo-do-Mario\gera_setup.py build
-#python Jogo-do-Mario\gera_setup.py bdist_msi
+#python Jogo_do_Mario\gera_setup.py build
+#python Jogo_do_Mario\gera_setup.py bdist_msi
 #msi microsoft installer
