@@ -17,25 +17,25 @@ pontuacao = 0
 fonte = pygame.font.Font(None,36) #cria uma fonte com tamanho 36
 fonte_meme = pygame.font.Font(None,50) #cria fonte com tamanho 50
 
-mario = pygame.image.load("Jogo_do_Mario\mario.png")
-fundo = pygame.image.load("Jogo_do_Mario\mariofundo.jpg")
-cano = pygame.image.load("Jogo_do_Mario\cano.png")
-bomba = pygame.image.load("Jogo_do_Mario\hbomba.png")
+mario = pygame.image.load("mario.png")
+fundo = pygame.image.load("mariofundo.jpg")
+cano = pygame.image.load("cano.png")
+bomba = pygame.image.load("hbomba.png")
 
-musica_mario = pygame.mixer.Sound("Jogo_do_Mario\musicmario.wav")  #carrega a musica
+musica_mario = pygame.mixer.Sound("musicmario.wav")  #carrega a musica
 musica_mario.play(-1) #deixa a musica jogo todo
 musica_mario.set_volume(0.1) #regula o volume da música
 
 #carrega wee
-som_pulo = pygame.mixer.Sound("Jogo_do_Mario\wee.wav")
+som_pulo = pygame.mixer.Sound("wee.wav")
 som_pulo.set_volume(0.1)
 
 #carrega som da bomba
-som_bomba = pygame.mixer.Sound("Jogo_do_Mario\partiuabomba.mp3")
+som_bomba = pygame.mixer.Sound("partiuabomba.mp3")
 som_bomba.set_volume(0.1)
 
 #carrega som final
-som_final = pygame.mixer.Sound("Jogo_do_Mario\perdedor.mp3")
+som_final = pygame.mixer.Sound("perdedor.mp3")
 som_final.set_volume(0.1)
 
 #texto de meme impossivel na pontuação 50
@@ -170,4 +170,4 @@ while running:
     pygame.display.update()
     clock.tick(fps)
 
-pygame.quit()
+pygame.quit() 
