@@ -1,6 +1,6 @@
 import cx_Freeze
 executables =[
-    cx_Freeze.Executable(script="Jogo-do-Mario\main.py")
+    cx_Freeze.Executable(script="Jogo_do_Mario\main.py")
 ]
 
 cx_Freeze.setup(

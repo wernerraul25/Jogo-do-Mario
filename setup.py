@@ -6,7 +6,7 @@ base = None
 if sys.platform == 'win32':
     base = None
 
-executables = [Executable("Jogo-do-Mario\main.py",base=base)]
+executables = [Executable("Jogo_do_Mario\main.py",base=base)]
 
 packages = ["pygame"]
 options = {
