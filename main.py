@@ -150,7 +150,7 @@ while running:
             dificuldade = 11
         elif pontuacao >= 50:
             dificuldade = dificuldade + 1
-            tela.blit(texto_meme,(4150,200))
+            tela.blit(texto_meme,(415,200))
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
