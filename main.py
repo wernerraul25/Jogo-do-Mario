@@ -37,6 +37,9 @@ som_bomba.set_volume(0.1)
 som_final = pygame.mixer.Sound("Jogo-do-Mario\perdedor.mp3")
 som_final.set_volume(0.1)
 
+#texto de meme impossivel na pontuação 50
+texto_meme = fonte.render("AAAAAAAAAAA VAI AGORA",True,white)
+
 clock = pygame.time.Clock()
 tela = pygame.display.set_mode((largura,altura))
 pygame.display.set_caption("Mario ninja")
@@ -137,10 +140,17 @@ while running:
             som_bomba.play()
 
         #aumenta dificuldade
-        if pontuacao == 15:
+        if pontuacao == 5:
             dificuldade = 8
-        elif pontuacao == 25:
+        elif pontuacao == 10:
             dificuldade = 9
+        elif pontuacao == 15:
+            dificuldade = 10
+        elif pontuacao == 20:
+            dificuldade = 11
+        elif pontuacao >= 50:
+            dificuldade = dificuldade + 1
+            tela.blit(texto_meme,(550,200))
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
