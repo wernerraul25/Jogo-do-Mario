@@ -19,7 +19,7 @@ options = {
 setup(
     name="Mario Ninja",
     options = options,
-    version = "1.1",
+    version = "1.2",
     description = "Jogo do Mario by Werner",
     executables = executables   
 )
