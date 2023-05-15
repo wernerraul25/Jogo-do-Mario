@@ -3,12 +3,14 @@ import pygame
 pygame.init()
 pygame.mixer.init()
 
+#variaveis do jogo
 altura = 720
 largura = 1280
 #tamanho = (1280,720)
 black = (0,0,0)
 white = (255,255,255)
 fps = 144
+dificuldade = 7
 
 #cria a pontuação e fonte
 pontuacao = 0
@@ -58,8 +60,6 @@ pulando = False
 
 modo_jogo = 1
 
-print("Opa")
-input("Olaaaaaaaaa")
 running = True
 while running:
     for event in pygame.event.get():
@@ -102,10 +102,10 @@ while running:
         #o que aparece na tela
         tela.blit(fundo,(0,0))
         tela.blit(cano,(posicao_canox,posicao_canoy))
-        posicao_canox = posicao_canox - 7 #cano se move pra esquerda
+        posicao_canox = posicao_canox - dificuldade #cano se move pra esquerda
         tela.blit(mario,(posicao_mariox,posicao_marioy))
         tela.blit(bomba,(posicao_bombax,posicao_bombay))
-        posicao_bombax = posicao_bombax - 7 #a bomba se move pra esquerda
+        posicao_bombax = posicao_bombax - dificuldade #a bomba se move pra esquerda
 
         #mostra pontuação
         texto_pontuacao = fonte.render("Pontuação: " + str(pontuacao), True, white)
@@ -133,8 +133,14 @@ while running:
             posicao_bombax = 1280
         
         #som da bomba
-        if posicao_bombax == 1400:
+        if posicao_bombax == 1280:
             som_bomba.play()
+
+        #aumenta dificuldade
+        if pontuacao == 15:
+            dificuldade = 8
+        elif pontuacao == 25:
+            dificuldade = 9
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
