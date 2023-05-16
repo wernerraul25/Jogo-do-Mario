@@ -21,6 +21,7 @@ mario = pygame.image.load("mario.png")
 fundo = pygame.image.load("mariofundo.jpg")
 cano = pygame.image.load("cano.png")
 bomba = pygame.image.load("hbomba.png")
+icone = pygame.image.load("icone.png")
 
 musica_mario = pygame.mixer.Sound("musicmario.wav")  #carrega a musica
 musica_mario.play(-1) #deixa a musica jogo todo
@@ -44,6 +45,7 @@ texto_meme = fonte_meme.render("AAAAAAAAAAA TENTA AGORA",True,white)
 clock = pygame.time.Clock()
 tela = pygame.display.set_mode((largura,altura))
 pygame.display.set_caption("Mario ninja")
+pygame.display.set_icon(icone)
 
 #posições mario, cano e bomba
 posicao_canox = 1400
