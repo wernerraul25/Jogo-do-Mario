@@ -20,6 +20,8 @@ cx_Freeze.setup(
     }, executables = executables
 )
 
+
+#funcionando
 #python gera_setup.py build
 #python gera_setup.py bdist_msi
 #msi microsoft installer
