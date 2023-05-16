@@ -1,6 +1,6 @@
 import cx_Freeze
 executables =[
-    cx_Freeze.Executable(script="main.py")
+    cx_Freeze.Executable(script="main.py", icon="icone.png")
 ]
 
 cx_Freeze.setup(
