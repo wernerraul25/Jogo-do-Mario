@@ -77,17 +77,14 @@ while running:
             y_pulo = -30
             pulando = True
             som_pulo.play()
-            pontuacao += 1 #cada pulo aumenta um ponto
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP and not pulando:
             y_pulo = -30
             pulando = True
             som_pulo.play()
-            pontuacao += 1
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_w and not pulando:
             y_pulo = -30
             pulando = True
             som_pulo.play()
-            pontuacao += 1
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_r:
             #reinicia o jogo
             posicao_canox = 1400
@@ -101,6 +98,7 @@ while running:
             largura_bomba = 295
             altura_bomba = 214
             pontuacao = 0
+            dificuldade = 7
             modo_jogo = 1
 
     if modo_jogo == 1:
@@ -141,10 +139,14 @@ while running:
             modo_jogo = 2
 
         #cano volta pro lado esquerdo da tela
+        #e soma pontos
         if posicao_canox <= -1280:
+            pontuacao += 1
             posicao_canox = 1280
         #bomba volta pro lado esquerdo da tela
+        #e soma pontos
         if posicao_bombax <= - 1280:
+            pontuacao += 1
             posicao_bombax = 1280
         
         #som da bomba
