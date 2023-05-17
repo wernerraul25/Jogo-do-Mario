@@ -89,6 +89,7 @@ while running:
             som_pulo.play()
             pontuacao += 1
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_r:
+            #reinicia o jogo
             posicao_canox = 1400
             posicao_canoy = 495
             largura_cano = 150
