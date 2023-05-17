@@ -22,7 +22,6 @@ fundo = pygame.image.load("fundo.jpg")
 cano = pygame.image.load("cano.png")
 bomba = pygame.image.load("bomba.png")
 icone = pygame.image.load("icone.png")
-cogumelo = pygame.image.load("cogumelo.png")
 
 musica_mario = pygame.mixer.Sound("musicmario.wav")  #carrega a musica
 musica_mario.play(-1) #deixa a musica jogo todo
@@ -59,8 +58,6 @@ posicao_bombax = 2100
 posicao_bombay = 480
 largura_bomba = 295
 altura_bomba = 214
-posicao_cogumelox = 400
-posicao_cogumeloy = 485
 
 #variaveis do pulo
 gravidade = 0.8
@@ -103,10 +100,6 @@ while running:
             posicao_marioy = altura - 245
             pulando = False
 
-        #verifica se o personagem pulou um objeto
-        '''if posicao_marioy <= altura - 100 and not pulando:
-            pontuacao += 0'''#era pra somar pontos, mas soma errado
-
         #o que aparece na tela
         tela.blit(fundo,(0,0))
         tela.blit(cano,(posicao_canox,posicao_canoy))
@@ -114,7 +107,6 @@ while running:
         tela.blit(mario,(posicao_mariox,posicao_marioy))
         tela.blit(bomba,(posicao_bombax,posicao_bombay))
         posicao_bombax = posicao_bombax - dificuldade #a bomba se move pra esquerda
-        tela.blit(cogumelo,(posicao_cogumelox,posicao_cogumeloy))
 
         #mostra pontuação
         texto_pontuacao = fonte.render("Pontuação: " + str(pontuacao), True, white)
