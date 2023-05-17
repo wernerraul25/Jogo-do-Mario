@@ -1,6 +1,6 @@
 import cx_Freeze
 executables =[
-    cx_Freeze.Executable(script="main.py", icon="icone.png")
+    cx_Freeze.Executable(script="main.py", icon="icone.ico")
 ]
 
 cx_Freeze.setup(
@@ -8,9 +8,9 @@ cx_Freeze.setup(
     options = {
         "build_exe":{
             "packages":["pygame"],
-            "include_files":["mariofundo.jpg",
+            "include_files":["fundo.jpg",
                              "cano.png",
-                             "hbomba.png",
+                             "bomba.png",
                              "mario.png",
                              "musicmario.wav",
                              "partiuabomba.mp3",

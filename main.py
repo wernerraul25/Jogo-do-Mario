@@ -88,6 +88,19 @@ while running:
             pulando = True
             som_pulo.play()
             pontuacao += 1
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_r:
+            posicao_canox = 1400
+            posicao_canoy = 495
+            largura_cano = 150
+            altura_cano = 170
+            posicao_mariox = 300
+            posicao_marioy = 475
+            posicao_bombax = 2100
+            posicao_bombay = 480
+            largura_bomba = 295
+            altura_bomba = 214
+            pontuacao = 0
+            modo_jogo = 1
 
     if modo_jogo == 1:
 
