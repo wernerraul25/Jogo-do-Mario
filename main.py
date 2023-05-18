@@ -4,9 +4,9 @@ pygame.init()
 pygame.mixer.init()
 
 #variaveis do jogo
+tamanho = (1280,720)
 altura = 720
 largura = 1280
-#tamanho = (1280,720)
 black = (0,0,0)
 white = (255,255,255)
 fps = 144
@@ -43,7 +43,7 @@ som_final.set_volume(0.1)
 texto_meme = fonte_meme.render("AAAAAAAAAAA TENTA AGORA",True,white)
 
 clock = pygame.time.Clock()
-tela = pygame.display.set_mode((largura,altura))
+tela = pygame.display.set_mode((tamanho))
 pygame.display.set_caption("Mario ninja")
 pygame.display.set_icon(icone)
 
