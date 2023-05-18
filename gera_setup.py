@@ -4,6 +4,8 @@ executables =[
 ]
 
 cx_Freeze.setup(
+    version="1.0",
+    description="Jogo do Mario by Raul Werner",
     name = "Mario Ninja",
     options = {
         "build_exe":{
