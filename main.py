@@ -27,6 +27,9 @@ musica_mario = pygame.mixer.Sound("musicmario.wav")  #carrega a musica
 musica_mario.play(-1) #deixa a musica jogo todo
 musica_mario.set_volume(0.1) #regula o volume da música
 
+musica_meme = pygame.mixer.Sound("musca_meme.mp3") #carrega música do meme
+musica_meme.set_volume(1)
+
 #carrega wee
 som_pulo = pygame.mixer.Sound("wee.wav")
 som_pulo.set_volume(0.1)
@@ -165,6 +168,7 @@ while running:
         elif pontuacao >= 50:
             dificuldade = dificuldade + 1
             tela.blit(texto_meme,(415,200))
+            musica_meme.play()
 
     #caso perca vai aparecer a segunda tela
     elif modo_jogo == 2:
