@@ -8,9 +8,10 @@ cx_Freeze.setup(
     options = {
         "build_exe":{
             "packages":["pygame"],
-            "include_files":["fundo.jpg",
+            "include_files":["bomba.png",
                              "cano.png",
-                             "bomba.png",
+                             "fundo.jpg",
+                             "icone.png",
                              "mario.png",
                              "musicmario.wav",
                              "partiuabomba.mp3",
@@ -21,7 +22,7 @@ cx_Freeze.setup(
 )
 
 
-# não funcionando
+#funcionando
 #python gera_setup.py build
 #python gera_setup.py bdist_msi
 #msi microsoft installer
