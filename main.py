@@ -140,14 +140,14 @@ while running:
 
         #cano volta pro lado esquerdo da tela
         #e soma pontos
-        if posicao_canox <= -1280:
+        if posicao_canox <= -250:
             pontuacao += 1
-            posicao_canox = 1280
+            posicao_canox = 2410
         #bomba volta pro lado esquerdo da tela
         #e soma pontos
-        if posicao_bombax <= - 1280:
+        if posicao_bombax <= - 250:
             pontuacao += 1
-            posicao_bombax = 1280
+            posicao_bombax = 2410
         
         #som da bomba
         if posicao_bombax == 1280:
